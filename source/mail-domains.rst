@@ -126,7 +126,8 @@ check DKIM record
 
 The output should look similar to this but with different chars for your personal key after ``p=``.
 
-
+.. hint::
+  While the output of ``uberspace records show example.com`` shows the DKIM entry as a single string (``"v=DKIM1;t=s;n=core;p=MIICIj...=="``), the result of the aforementioned ``dig`` command may display multiple strings (look for " "). It's not directly visible in the code block above, but the DKIM value has been split in 2 strings by dig. This is OK and not an issue. You can verify your settings `here <https://dmarcadvisor.com/dkim-check/>`_ (the DKIM selector is *uberspace*).
 
 
 Domain validation
